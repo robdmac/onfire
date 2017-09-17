@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout-v21/preference_material.xml",
+        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout-v21/preference_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout-v21/preference_information_material.xml",
+        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout-v21/preference_information_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout-v21/preference_category_material.xml",
+        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout-v21/preference_category_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout-v21/preference_material.xml",
+        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout-v21/preference_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout-v21/preference_information_material.xml",
+        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout-v21/preference_information_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout-v21/preference_category_material.xml",
+        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout-v21/preference_category_material.xml"
+    }
+]

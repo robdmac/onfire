@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v21/ic_notify_24dp.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-xxxhdpi-v21/ic_notify_24dp.png"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v21/ic_notify_24dp.png",
+        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-xxxhdpi-v21/ic_notify_24dp.png"
+    }
+]
