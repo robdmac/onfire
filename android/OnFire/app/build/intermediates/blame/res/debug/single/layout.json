@@ -36,12 +36,12 @@
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
-        "source": "/Users/rob/.android/build-cache/5548afc1c10b29aae27429ba7fc14e682a084725/output/res/layout/design_layout_tab_text.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference_material.xml",
         "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout/preference_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/rob/.android/build-cache/5548afc1c10b29aae27429ba7fc14e682a084725/output/res/layout/design_layout_tab_text.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout/preference_widget_switch.xml",
@@ -56,12 +56,12 @@
         "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/layout/fragment_placemark_dialog.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
-        "source": "/Users/rob/.android/build-cache/5548afc1c10b29aae27429ba7fc14e682a084725/output/res/layout/design_navigation_menu.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/Users/rob/.android/build-cache/5548afc1c10b29aae27429ba7fc14e682a084725/output/res/layout/design_navigation_menu.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",

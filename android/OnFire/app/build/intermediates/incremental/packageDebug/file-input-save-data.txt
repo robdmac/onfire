@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Sep 17 02:51:07 PDT 2017
+#Sun Sep 17 07:29:51 PDT 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/rob/onfire/android/OnFire/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/gps_logger.png
 14.set=ANDROID_RESOURCE

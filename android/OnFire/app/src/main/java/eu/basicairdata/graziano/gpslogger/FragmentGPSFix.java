@@ -49,25 +49,25 @@ public class FragmentGPSFix extends Fragment {
     private TextView TVLongitudeUM;
     private TextView TVAltitude;
     private TextView TVAltitudeUM;
-    private TextView TVSpeed;
-    private TextView TVSpeedUM;
-    private TextView TVBearing;
+    //private TextView TVSpeed;
+    //private TextView TVSpeedUM;
+    //private TextView TVBearing;
     private TextView TVAccuracy;
     private TextView TVAccuracyUM;
     private TextView TVGPSFixStatus;
-    private TextView TVDirectionUM;
+    //private TextView TVDirectionUM;
 
     private TableLayout TLCoordinates;
     private TableLayout TLAltitude;
-    private TableLayout TLSpeed;
-    private TableLayout TLBearing;
+    //private TableLayout TLSpeed;
+    //private TableLayout TLBearing;
     private TableLayout TLAccuracy;
 
     private PhysicalData phdLatitude;
     private PhysicalData phdLongitude;
     private PhysicalData phdAltitude;
-    private PhysicalData phdSpeed;
-    private PhysicalData phdBearing;
+    //private PhysicalData phdSpeed;
+    //private PhysicalData phdBearing;
     private PhysicalData phdAccuracy;
 
     final GPSApplication gpsApplication = GPSApplication.getInstance();
@@ -105,18 +105,18 @@ public class FragmentGPSFix extends Fragment {
         TVLongitudeUM = (TextView) view.findViewById(R.id.id_textView_LongitudeUM);
         TVAltitude = (TextView) view.findViewById(R.id.id_textView_Altitude);
         TVAltitudeUM = (TextView) view.findViewById(R.id.id_textView_AltitudeUM);
-        TVSpeed = (TextView) view.findViewById(R.id.id_textView_Speed);
-        TVSpeedUM = (TextView) view.findViewById(R.id.id_textView_SpeedUM);
-        TVBearing = (TextView) view.findViewById(R.id.id_textView_Bearing);
+        //TVSpeed = (TextView) view.findViewById(R.id.id_textView_Speed);
+        //TVSpeedUM = (TextView) view.findViewById(R.id.id_textView_SpeedUM);
+        //TVBearing = (TextView) view.findViewById(R.id.id_textView_Bearing);
         TVAccuracy = (TextView) view.findViewById(R.id.id_textView_Accuracy);
         TVAccuracyUM = (TextView) view.findViewById(R.id.id_textView_AccuracyUM);
         TVGPSFixStatus = (TextView) view.findViewById(R.id.id_textView_GPSFixStatus);
-        TVDirectionUM = (TextView) view.findViewById(R.id.id_textView_BearingUM);
+        //TVDirectionUM = (TextView) view.findViewById(R.id.id_textView_BearingUM);
 
         TLCoordinates = (TableLayout) view.findViewById(R.id.id_TableLayout_Coordinates) ;
         TLAltitude = (TableLayout) view.findViewById(R.id.id_TableLayout_Altitude);
-        TLSpeed = (TableLayout) view.findViewById(R.id.id_TableLayout_Speed);
-        TLBearing = (TableLayout) view.findViewById(R.id.id_TableLayout_Bearing);
+        //TLSpeed = (TableLayout) view.findViewById(R.id.id_TableLayout_Speed);
+        //TLBearing = (TableLayout) view.findViewById(R.id.id_TableLayout_Bearing);
         TLAccuracy = (TableLayout) view.findViewById(R.id.id_TableLayout_Accuracy);
 
         return view;
@@ -158,8 +158,8 @@ public class FragmentGPSFix extends Fragment {
                 phdLatitude = phdformatter.format(location.getLatitude(), PhysicalDataFormatter.FORMAT_LATITUDE);
                 phdLongitude = phdformatter.format(location.getLongitude(), PhysicalDataFormatter.FORMAT_LONGITUDE);
                 phdAltitude = phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
-                phdSpeed = phdformatter.format(location.getSpeed(), PhysicalDataFormatter.FORMAT_SPEED);
-                phdBearing = phdformatter.format(location.getBearing(), PhysicalDataFormatter.FORMAT_BEARING);
+                //phdSpeed = phdformatter.format(location.getSpeed(), PhysicalDataFormatter.FORMAT_SPEED);
+                //phdBearing = phdformatter.format(location.getBearing(), PhysicalDataFormatter.FORMAT_BEARING);
                 phdAccuracy = phdformatter.format(location.getAccuracy(), PhysicalDataFormatter.FORMAT_ACCURACY);
 
                 TVLatitude.setText(phdLatitude.Value);
@@ -168,9 +168,9 @@ public class FragmentGPSFix extends Fragment {
                 TVLongitudeUM.setText(phdLongitude.UM);
                 TVAltitude.setText(phdAltitude.Value);
                 TVAltitudeUM.setText(phdAltitude.UM);
-                TVSpeed.setText(phdSpeed.Value);
-                TVSpeedUM.setText(phdSpeed.UM);
-                TVBearing.setText(phdBearing.Value);
+                //TVSpeed.setText(phdSpeed.Value);
+                //TVSpeedUM.setText(phdSpeed.UM);
+                //TVBearing.setText(phdBearing.Value);
                 TVAccuracy.setText(phdAccuracy.Value);
                 TVAccuracyUM.setText(phdAccuracy.UM);
 
@@ -182,20 +182,20 @@ public class FragmentGPSFix extends Fragment {
 
                 TVGPSFixStatus.setVisibility(View.GONE);
 
-                TVDirectionUM.setVisibility(prefDirections == 0 ? View.GONE : View.VISIBLE);
+                //TVDirectionUM.setVisibility(prefDirections == 0 ? View.GONE : View.VISIBLE);
 
                 TLCoordinates.setVisibility(phdLatitude.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
                 TLAltitude.setVisibility(phdAltitude.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
-                TLSpeed.setVisibility(phdSpeed.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
-                TLBearing.setVisibility(phdBearing.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
+                //TLSpeed.setVisibility(phdSpeed.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
+                //TLBearing.setVisibility(phdBearing.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
                 TLAccuracy.setVisibility(phdAccuracy.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
 
             } else {
                 TLCoordinates.setVisibility(View.INVISIBLE);
-                TLAltitude.setVisibility(View.INVISIBLE);
-                TLSpeed.setVisibility(View.INVISIBLE);
-                TLBearing.setVisibility(View.INVISIBLE);
-                TLAccuracy.setVisibility(View.INVISIBLE);
+                TLAltitude.setVisibility(View.VISIBLE);
+                //TLSpeed.setVisibility(View.INVISIBLE);
+                //TLBearing.setVisibility(View.INVISIBLE);
+                TLAccuracy.setVisibility(View.VISIBLE);
 
                 TVGPSFixStatus.setVisibility(View.VISIBLE);
                 switch (GPSStatus) {

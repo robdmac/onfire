@@ -191,61 +191,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/id_TableLayout_Speed"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:layout_margin="3dp"
-                android:background="@drawable/rounded_corner_dark"
-                android:visibility="invisible">
-
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearanceLargeNumbers"
-                        android:id="@+id/id_textView_Speed"
-                        android:freezesText="true"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearanceLargeUM"
-                        android:id="@+id/id_textView_SpeedUM"
-                        android:layout_weight="0"
-                        android:layout_marginLeft="7dp"
-                        android:layout_marginStart="7dp" />
-                </TableRow>
-
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/speed"
-                    android:id="@+id/id_textView_SpeedLabel"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:gravity="center_horizontal" />
-
-            </TableLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:weightSum="2">
-
-            <TableLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:id="@+id/id_TableLayout_Accuracy"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
@@ -288,54 +233,6 @@
                     android:gravity="center_horizontal" />
 
             </TableLayout>
-
-            <TableLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/id_TableLayout_Bearing"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:background="@drawable/rounded_corner_dark"
-                android:layout_margin="3dp"
-                android:visibility="invisible">
-
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearanceLargeNumbers"
-                        android:id="@+id/id_textView_Bearing"
-                        android:freezesText="true"
-                        android:textStyle="bold"
-                        android:gravity="center_horizontal" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearanceLargeUM"
-                        android:id="@+id/id_textView_BearingUM"
-                        android:layout_weight="0"
-                        android:layout_marginLeft="7dp"
-                        android:layout_marginStart="7dp" />
-                </TableRow>
-
-                <TextView
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/direction"
-                    android:id="@+id/id_textView_BearingLabel"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:gravity="center_horizontal" />
-
-            </TableLayout>
-
         </LinearLayout>
 
     </LinearLayout>
