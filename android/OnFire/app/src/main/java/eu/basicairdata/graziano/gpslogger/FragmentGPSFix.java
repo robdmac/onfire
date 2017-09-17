@@ -27,6 +27,8 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import java.util.Random;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
@@ -172,6 +174,15 @@ public class FragmentGPSFix extends Fragment {
     private boolean EGMAltitudeCorrection;
     private boolean isValidAltitude;
 
+    private int currentHeartRate = 80;
+    private int currentCarbonMonoxide = 8;
+    private int currentPM2_5 = 7;
+    private int currentPM01 = 3;
+    Random rn1 = new Random(13777);
+    Random rn2 = new Random(247);
+    Random rn3 = new Random(13);
+    Random rn4 = new Random(461634);
+
     public void Update() {
         //Log.w("myApp", "[#] FragmentGPSFix.java - Update(Location location)");
         location = gpsApplication.getCurrentLocationExtended();
@@ -189,10 +200,25 @@ public class FragmentGPSFix extends Fragment {
                 //phdBearing = phdformatter.format(location.getBearing(), PhysicalDataFormatter.FORMAT_BEARING);
                 phdAccuracy = phdformatter.format(location.getAccuracy(), PhysicalDataFormatter.FORMAT_ACCURACY);
 
-                phdHeartRate = phdformatter.format("83", "bpm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
-                phdCarbonMonoxide = phdformatter.format("45", "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
-                phdPM01 = phdformatter.format("3", "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
-                phdPM2_5 = phdformatter.format("1", "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                if (currentHeartRate >= 110) currentHeartRate -=1;
+                else if (currentHeartRate <= 80) currentHeartRate +=1;
+                else currentHeartRate += rn1.nextInt(6) -3;
+                if (currentCarbonMonoxide >= 20) currentCarbonMonoxide -=1;
+                else if (currentCarbonMonoxide <= 0) currentCarbonMonoxide +=1;
+                else currentCarbonMonoxide += rn2.nextInt(6) -3;
+                if (currentCarbonMonoxide < 0) currentCarbonMonoxide = 0;
+                if (currentPM2_5 >= 20) currentPM2_5 -=1;
+                else if (currentPM2_5 <= 0) currentPM2_5 +=1;
+                else currentPM2_5 += rn3.nextInt(4) -2;
+                if (currentPM2_5 < 0) currentPM2_5 = 0;
+                if (currentPM01 >= 20) currentPM01 -=1;
+                else if (currentPM01 <= 0) currentPM01 +=1;
+                else currentPM01 += rn4.nextInt(2) -1;
+                if (currentPM01 < 0) currentPM01 = 0;
+                phdHeartRate = phdformatter.format(Integer.toString(currentHeartRate), "bpm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                phdCarbonMonoxide = phdformatter.format(Integer.toString(currentCarbonMonoxide), "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                phdPM01 = phdformatter.format(Integer.toString(currentPM01), "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                phdPM2_5 = phdformatter.format(Integer.toString(currentPM2_5), "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
 
                 TVLatitude.setText(phdLatitude.Value);
                 TVLongitude.setText(phdLongitude.Value);
