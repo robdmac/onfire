@@ -20,24 +20,24 @@
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png",
-        "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png",
+        "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png",

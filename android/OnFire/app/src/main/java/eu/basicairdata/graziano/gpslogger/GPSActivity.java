@@ -225,8 +225,6 @@ public class GPSActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new FragmentGPSFix(), getString(R.string.tab_gpsfix));
-        adapter.addFragment(new FragmentTrack(), getString(R.string.tab_track));
-        adapter.addFragment(new FragmentTracklist(), getString(R.string.tab_tracklist));
         viewPager.setAdapter(adapter);
     }
 
