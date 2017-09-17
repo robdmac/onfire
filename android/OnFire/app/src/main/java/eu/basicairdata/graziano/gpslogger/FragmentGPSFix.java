@@ -49,6 +49,14 @@ public class FragmentGPSFix extends Fragment {
     private TextView TVLongitudeUM;
     private TextView TVAltitude;
     private TextView TVAltitudeUM;
+    private TextView TVHeartRate;
+    private TextView TVCarbonMonoxide;
+    private TextView TVPM2_5;
+    private TextView TVPM01;
+    private TextView TVHeartRateUM;
+    private TextView TVCarbonMonoxideUM;
+    private TextView TVPM2_5UM;
+    private TextView TVPM01UM;
     //private TextView TVSpeed;
     //private TextView TVSpeedUM;
     //private TextView TVBearing;
@@ -56,11 +64,15 @@ public class FragmentGPSFix extends Fragment {
     private TextView TVAccuracyUM;
     private TextView TVGPSFixStatus;
     //private TextView TVDirectionUM;
-
+    private TableLayout TLHeartRate;
+    private TableLayout TLCarbonMonoxide;
+    private TableLayout TLPM2_5;
+    private TableLayout TLPM01;
     private TableLayout TLCoordinates;
     private TableLayout TLAltitude;
     //private TableLayout TLSpeed;
     //private TableLayout TLBearing;
+
     private TableLayout TLAccuracy;
 
     private PhysicalData phdLatitude;
@@ -69,6 +81,10 @@ public class FragmentGPSFix extends Fragment {
     //private PhysicalData phdSpeed;
     //private PhysicalData phdBearing;
     private PhysicalData phdAccuracy;
+    private PhysicalData phdHeartRate;
+    private PhysicalData phdCarbonMonoxide;
+    private PhysicalData phdPM2_5;
+    private PhysicalData phdPM01;
 
     final GPSApplication gpsApplication = GPSApplication.getInstance();
 
@@ -98,7 +114,18 @@ public class FragmentGPSFix extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gpsfix, container, false);
-
+        TVHeartRate = (TextView) view.findViewById(R.id.id_textView_HeartRate);
+        TVCarbonMonoxide = (TextView) view.findViewById(R.id.id_textView_CarbonMonoxide);
+        TVPM2_5 = (TextView) view.findViewById(R.id.id_textView_PM2_5);
+        TVPM01 = (TextView) view.findViewById(R.id.id_textView_PM01);
+        TVHeartRateUM = (TextView) view.findViewById(R.id.id_textView_HeartRateUM);
+        TVCarbonMonoxideUM = (TextView) view.findViewById(R.id.id_textView_CarbonMonoxideUM);
+        TVPM2_5UM = (TextView) view.findViewById(R.id.id_textView_PM2_5UM);
+        TVPM01UM = (TextView) view.findViewById(R.id.id_textView_PM01UM);
+        TLHeartRate = (TableLayout) view.findViewById(R.id.id_TableLayout_HeartRate);
+        TLCarbonMonoxide = (TableLayout) view.findViewById(R.id.id_TableLayout_CarbonMonoxide);
+        TLPM2_5 = (TableLayout) view.findViewById(R.id.id_TableLayout_PM2_5);
+        TLPM01 = (TableLayout) view.findViewById(R.id.id_TableLayout_PM01);
         TVLatitude = (TextView) view.findViewById(R.id.id_textView_Latitude);
         TVLongitude = (TextView) view.findViewById(R.id.id_textView_Longitude);
         TVLatitudeUM = (TextView) view.findViewById(R.id.id_textView_LatitudeUM);
@@ -162,10 +189,23 @@ public class FragmentGPSFix extends Fragment {
                 //phdBearing = phdformatter.format(location.getBearing(), PhysicalDataFormatter.FORMAT_BEARING);
                 phdAccuracy = phdformatter.format(location.getAccuracy(), PhysicalDataFormatter.FORMAT_ACCURACY);
 
+                phdHeartRate = phdformatter.format("83", "bpm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                phdCarbonMonoxide = phdformatter.format("45", "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                phdPM01 = phdformatter.format("3", "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+                phdPM2_5 = phdformatter.format("1", "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
+
                 TVLatitude.setText(phdLatitude.Value);
                 TVLongitude.setText(phdLongitude.Value);
                 TVLatitudeUM.setText(phdLatitude.UM);
                 TVLongitudeUM.setText(phdLongitude.UM);
+                TVHeartRate.setText(phdHeartRate.Value);
+                TVCarbonMonoxide.setText(phdCarbonMonoxide.Value);
+                TVPM01.setText(phdPM01.Value);
+                TVPM2_5.setText(phdPM2_5.Value);
+                TVHeartRateUM.setText(phdHeartRate.UM);
+                TVCarbonMonoxideUM.setText(phdCarbonMonoxide.UM);
+                TVPM01UM.setText(phdPM01.UM);
+                TVPM2_5UM.setText(phdPM2_5.UM);
                 TVAltitude.setText(phdAltitude.Value);
                 TVAltitudeUM.setText(phdAltitude.UM);
                 //TVSpeed.setText(phdSpeed.Value);
@@ -173,6 +213,7 @@ public class FragmentGPSFix extends Fragment {
                 //TVBearing.setText(phdBearing.Value);
                 TVAccuracy.setText(phdAccuracy.Value);
                 TVAccuracyUM.setText(phdAccuracy.UM);
+
 
                 // Colorize the Altitude textview depending on the altitude EGM Correction
                 isValidAltitude = EGMAltitudeCorrection && (location.getAltitudeEGM96Correction() != NOT_AVAILABLE);
@@ -190,12 +231,22 @@ public class FragmentGPSFix extends Fragment {
                 //TLBearing.setVisibility(phdBearing.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
                 TLAccuracy.setVisibility(phdAccuracy.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
 
+                TLHeartRate.setVisibility(phdHeartRate.Value.equals("") ? View.VISIBLE : View.VISIBLE);
+                TLCarbonMonoxide.setVisibility(phdCarbonMonoxide.Value.equals("") ? View.VISIBLE : View.VISIBLE);
+                TLPM01.setVisibility(phdPM01.Value.equals("") ? View.VISIBLE : View.VISIBLE);
+                TLPM2_5.setVisibility(phdPM2_5.Value.equals("") ? View.VISIBLE : View.VISIBLE);
+
             } else {
                 TLCoordinates.setVisibility(View.INVISIBLE);
-                TLAltitude.setVisibility(View.VISIBLE);
+                TLAltitude.setVisibility(View.INVISIBLE);
                 //TLSpeed.setVisibility(View.INVISIBLE);
                 //TLBearing.setVisibility(View.INVISIBLE);
-                TLAccuracy.setVisibility(View.VISIBLE);
+                TLAccuracy.setVisibility(View.INVISIBLE);
+
+                TLHeartRate.setVisibility(View.INVISIBLE);
+                TLCarbonMonoxide.setVisibility(View.INVISIBLE);
+                TLPM01.setVisibility(View.INVISIBLE);
+                TLPM2_5.setVisibility(View.INVISIBLE);
 
                 TVGPSFixStatus.setVisibility(View.VISIBLE);
                 switch (GPSStatus) {

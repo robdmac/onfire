@@ -33,6 +33,210 @@
         android:orientation="vertical"
         android:baselineAligned="false">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:weightSum="2">
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/id_TableLayout_HeartRate"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/rounded_corner_dark"
+                android:layout_margin="3dp"
+                android:visibility="invisible">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeNumbers"
+                        android:id="@+id/id_textView_HeartRate"
+                        android:freezesText="true"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeUM"
+                        android:id="@+id/id_textView_HeartRateUM"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"/>
+                </TableRow>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/heartrate"
+                    android:id="@+id/id_textView_HeartRateLabel"
+                    android:textSize="13sp"
+                    android:gravity="center_horizontal" />
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/id_TableLayout_CarbonMonoxide"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/rounded_corner_dark"
+                android:layout_margin="3dp"
+                android:visibility="invisible">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeNumbers"
+                        android:id="@+id/id_textView_CarbonMonoxide"
+                        android:freezesText="true"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeUM"
+                        android:id="@+id/id_textView_CarbonMonoxideUM"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/carbonmonoxide"
+                    android:id="@+id/id_textView_CarbonMonoxideLabel"
+                    android:textSize="13sp"
+                    android:gravity="center_horizontal" />
+
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:weightSum="2">
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/id_TableLayout_PM01"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/rounded_corner_dark"
+                android:layout_margin="3dp"
+                android:visibility="invisible">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeNumbers"
+                        android:id="@+id/id_textView_PM01"
+                        android:freezesText="true"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeUM"
+                        android:id="@+id/id_textView_PM01UM"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp"/>
+                </TableRow>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/pm01"
+                    android:id="@+id/id_textView_PM01Label"
+                    android:textSize="13sp"
+                    android:gravity="center_horizontal" />
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/id_TableLayout_PM2_5"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/rounded_corner_dark"
+                android:layout_margin="3dp"
+                android:visibility="invisible">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeNumbers"
+                        android:id="@+id/id_textView_PM2_5"
+                        android:freezesText="true"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearanceLargeUM"
+                        android:id="@+id/id_textView_PM2_5UM"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginStart="7dp" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/pm2_5"
+                    android:id="@+id/id_textView_PM2_5Label"
+                    android:textSize="13sp"
+                    android:gravity="center_horizontal" />
+
+            </TableLayout>
+        </LinearLayout>
+
             <TableLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

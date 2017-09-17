@@ -50,8 +50,14 @@ class PhysicalDataFormatter {
     
     //private PhysicalData _PhysicalData = new PhysicalData();
     private GPSApplication gpsApplication = GPSApplication.getInstance();
-        
-    
+
+    public PhysicalData format(String Number, String Format) {
+        PhysicalData _PhysicalData = new PhysicalData();
+        _PhysicalData.Value = Number;
+        _PhysicalData.UM = Format;
+        return(_PhysicalData);
+    }
+
     public PhysicalData format(float Number, byte Format) {
         PhysicalData _PhysicalData = new PhysicalData();
         _PhysicalData.Value = "";

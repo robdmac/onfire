@@ -33,6 +33,11 @@
     <string name="speed">Speed</string>
     <string name="direction">Direction</string>
     <string name="accuracy">Accuracy</string>
+    <string name="heartrate">Heart Rate</string>
+    <string name="carbonmonoxide">Carbon Monoxide</string>
+    <string name="pm2_5">PM 2.5</string>
+    <string name="pm01">PM 0.1</string>
+
 
     <string name="north">N</string>
     <string name="south">S</string>
