@@ -1,4 +1,4 @@
-#Sun Sep 17 02:26:57 PDT 2017
+#Sun Sep 17 02:33:42 PDT 2017
 base.0=/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9
 renamed.0=classes.dex
 file.0=/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex

@@ -1,4 +1,4 @@
-#Sun Sep 17 02:28:18 PDT 2017
+#Sun Sep 17 02:33:42 PDT 2017
 base.0=/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_78119eb132b0ea6ee168f6210cf9b7efd3661b06
 renamed.1=classes.dex
 renamed.0=classes2.dex
