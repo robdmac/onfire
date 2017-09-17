@@ -6,45 +6,30 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1505640810537"
+    timestamp="1505642005186"
     token="-5442413527755871232"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1155" />
+        duration="886" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="68" />
+        duration="51" />
     <task
         name="verifier"
-        duration="35" />
+        duration="25" />
 
-    <artifact
-        location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
-    <artifact
-        location="/Users/rob/onfire/android/OnFire/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1505640271842"
+        timestamp="1505641495426"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
@@ -85,8 +70,11 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1505640810537"
+        timestamp="1505641856463"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
@@ -94,17 +82,19 @@
             location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/Users/rob/onfire/android/OnFire/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1505642005186"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/rob/onfire/android/OnFire/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

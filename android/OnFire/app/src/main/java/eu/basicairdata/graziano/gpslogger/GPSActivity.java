@@ -28,7 +28,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -70,13 +69,10 @@ public class GPSActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private View bottomSheet;
     private MenuItem menutrackfinished = null;
     private int activeTab = 1;
 
     private boolean prefKeepScreenOn = true;
-
-    private BottomSheetBehavior mBottomSheetBehavior;
 
     Toast ToastClickAgain;
 
@@ -104,14 +100,9 @@ public class GPSActivity extends AppCompatActivity {
                     public void onTabSelected(TabLayout.Tab tab) {
                         super.onTabSelected(tab);
                         activeTab = tab.getPosition();
-                        updateBottomSheetPosition();
                     }
                 });
 
-        bottomSheet = findViewById( R.id.id_bottomsheet );
-
-        mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
-        mBottomSheetBehavior.setHideable (false);
 
         activeTab = tabLayout.getSelectedTabPosition();
 
@@ -152,7 +143,6 @@ public class GPSActivity extends AppCompatActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        updateBottomSheetPosition();
     }
 
     @Override
@@ -208,20 +198,6 @@ public class GPSActivity extends AppCompatActivity {
     }
 
 
-    private void updateBottomSheetPosition() {
-        activeTab = tabLayout.getSelectedTabPosition();
-        if (activeTab != 2) {
-            mBottomSheetBehavior.setPeekHeight(1);
-            mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-            //Log.w("myApp", "[#] GPSActivity.java - mBottomSheetBehavior.setPeekHeight(" + bottomSheet.getHeight() +");");
-            mBottomSheetBehavior.setPeekHeight(bottomSheet.getHeight());
-        } else {
-            mBottomSheetBehavior.setPeekHeight(1);
-            mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED) ;
-        }
-    }
-
-
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new FragmentGPSFix(), getString(R.string.tab_gpsfix));
@@ -263,8 +239,6 @@ public class GPSActivity extends AppCompatActivity {
         if (msg == EventBusMSG.REQUEST_ADD_PLACEMARK) {
             // Show Placemark Dialog
             FragmentManager fm = getSupportFragmentManager();
-            FragmentPlacemarkDialog placemarkDialog = new FragmentPlacemarkDialog();
-            placemarkDialog.show(fm, "");
             return;
         }
         if (msg == EventBusMSG.APPLY_SETTINGS) {
