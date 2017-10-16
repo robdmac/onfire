@@ -1,0 +1,13 @@
+{
+    "name": "OnFire",
+    "version" : "0.0.1",
+    "description": "The backend for OnFire",
+    "main": "test.js",
+    "dependencies": {
+	"express": "^4.13.3",
+	"ejs": "*",
+	"body-parser": "*",
+	"redis": "*",
+	"pubnub": "^4.0"
+    }
+}

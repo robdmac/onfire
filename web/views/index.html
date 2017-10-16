@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>OnFire</title>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.15.1.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.21/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.21/"></script>
+    <script>
+      var map;
+      require(["esri/map", "esri/symbols/SimpleMarkerSymbol", "esri/graphic", "esri/layers/GraphicsLayer", "esri/Color", "esri/geometry/Point", "esri/InfoTemplate", "dojo/domReady!"], function(Map, SimpleMarkerSymbol, Graphic, GraphicsLayer, Color, Point, InfoTemplate) {
+      var green = new SimpleMarkerSymbol();
+      green.setColor(new Color([170, 255, 0, 0.75]));
+      green.setSize(48);
+      var yellow = new SimpleMarkerSymbol();
+      yellow.setColor(new Color([255, 255, 0, 0.75]));
+      yellow.setSize(48);
+      var red = new SimpleMarkerSymbol();
+      red.setColor(new Color([255, 0, 0, 0.75]));
+      red.setSize(48);
+      map = new Map("map", {
+        basemap: "topo",
+        center: [-122.45, 37.75],
+        zoom: 13
+      });
+      function getTitle(graphic){
+        return "Firefighter #" + graphic.attributes.index;
+      }
+      function getTextContent(graphic){
+        console.log(graphic);
+        return "Heart rate: " + graphic.attributes.heart_rate;
+      }
+      <!-- var template = new InfoTemplate("Firefighter", "${*}"); -->
+      var template = new InfoTemplate(getTitle, getTextContent);
+      <!-- template.setTitle("<b>Firefighter</b>"); -->
+      <!-- template.setContent(getTextContent); -->
+      
+            pubnub = new PubNub({
+        publishKey: "pub-c-07741803-e3cd-44c0-ade1-7e50df4dad5b",
+        subscribeKey: "sub-c-d8f3705a-9b20-11e7-b8fe-0e6b753288ab"
+      });
+      pubnub.addListener({
+        status: function(statusEvent) {},
+        message: function(message) {
+          console.log(message);
+          if(message.channel == "test_data") {
+            document.getElementById("test_data").innerHTML = message.message;
+          } else if(message.channel == "points") {
+            map.graphics.clear();
+            for(i = 0; i < message.message.points.length; i++) {
+			   var point = new Point(message.message.points[i].longitude, message.message.points[i].latitude);
+			   if(message.message.points[i].color == "green") {
+			   <!-- map.graphics.add(new Graphic(point, green)); -->
+			   map.graphics.add(new Graphic(point, green, {heart_rate: message.message.points[i].heart_rate, index: i}, template));
+			   }
+			   if(message.message.points[i].color == "yellow") {
+			   map.graphics.add(new Graphic(point, yellow, {heart_rate: message.message.points[i].heart_rate, index: i}, template));
+			   }
+			   if(message.message.points[i].color == "red") {
+			   map.graphics.add(new Graphic(point, red, {heart_rate: message.message.points[i].heart_rate, index: i}, template));
+			   }
+            }
+          }
+        },
+        presence: function(presenceEvent) {}
+      });
+      pubnub.subscribe({channels: ['test_data', 'points']});
+      });
+    </script>
+  </head>
+  <body><h1 id="test_data" style="display: none;"><%= test_data %></h1><div id="map" style="height:100%;"></div></body>
+</html>
