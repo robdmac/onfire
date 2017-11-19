@@ -36,10 +36,6 @@
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference_material.xml",
-        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout/preference_material.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
         "source": "/Users/rob/.android/build-cache/5548afc1c10b29aae27429ba7fc14e682a084725/output/res/layout/design_layout_tab_text.xml"
     },
@@ -202,10 +198,6 @@
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference.xml",
-        "source": "/Users/rob/.android/build-cache/92ab80107b3ed42ae5e30762a445bbe13d7984d0/output/res/layout/preference.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
@@ -440,10 +432,6 @@
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/notification_media_cancel_action.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference_category_material.xml",
-        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout/preference_category_material.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_list_menu_item_layout.xml"
     },
@@ -546,10 +534,6 @@
     {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_popup_menu_item_layout.xml"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference_information_material.xml",
-        "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/layout/preference_information_material.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",

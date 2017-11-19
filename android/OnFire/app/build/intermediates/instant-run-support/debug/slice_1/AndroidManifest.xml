@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="eu.basicairdata.graziano.gpslogger"
-      android:versionCode="18"
-      android:versionName="2.1.8a_20170911"
+      package="eu.basicairdata.graziano.onfire"
+      android:versionCode="19"
+      android:versionName="0.19"
       split="lib_slice_1_apk">
 </manifest>

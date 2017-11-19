@@ -168,10 +168,6 @@
         "source": "/Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/res/drawable/preference_list_divider_material.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
-        "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable/abc_edit_text_material.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable/abc_cab_background_top_material.xml"
     },
@@ -198,10 +194,6 @@
     {
         "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable/abc_ratingbar_full_material.xml"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",

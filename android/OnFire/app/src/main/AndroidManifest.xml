@@ -19,7 +19,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.basicairdata.graziano.gpslogger">
+    package="eu.basicairdata.graziano.onfire">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -31,13 +31,13 @@
         tools:overrideLibrary="android.support.v14.preference" />
 
     <application
-        android:name=".GPSApplication"
+        android:name="eu.basicairdata.graziano.onfire.GPSApplication"
         android:allowBackup="true"
         android:icon="@mipmap/gps_logger"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-        <activity android:name=".GPSActivity"
+        <activity android:name="eu.basicairdata.graziano.onfire.GPSActivity"
             android:label="@string/app_name"
             android:exported="true"
             android:launchMode="singleTask">
@@ -46,16 +46,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity"
+        <activity android:name="eu.basicairdata.graziano.onfire.SettingsActivity"
             android:label="@string/menu_settings"
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".GPSActivity" />
+                android:value="eu.basicairdata.graziano.onfire.GPSActivity" />
         </activity>
         <service
-            android:name=".GPSService"
+            android:name="eu.basicairdata.graziano.onfire.GPSService"
             android:exported="true">
             <intent-filter>
                 <action android:name="eu.basicairdata.graziano.gpslogger.GPSService" />

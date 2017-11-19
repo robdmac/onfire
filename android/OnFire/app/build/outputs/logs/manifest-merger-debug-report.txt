@@ -2,7 +2,7 @@
 manifest
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:21:1-66:12
 	package
-		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:22:5-49
+		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:22:5-46
 		INJECTED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -37,6 +37,8 @@ MERGED from [com.android.support:cardview-v7:23.4.0] /Users/rob/.android/build-c
 MERGED from [com.android.support:preference-v14:23.4.0] /Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/AndroidManifest.xml:7:5-44
 MERGED from [com.android.support:preference-v7:23.4.0] /Users/rob/.android/build-cache/92ab80107b3ed42ae5e30762a445bbe13d7984d0/output/AndroidManifest.xml:7:5-43
 MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/rob/.android/build-cache/51f6303e5ed35ab8b253ff9a1cd1d1fe78337419/output/AndroidManifest.xml:20:5-43
+MERGED from [me.aflak.libraries:bluetooth:1.2.4] /Users/rob/.android/build-cache/94629d1ff5aea7f9d38ccfb0a63954249cc8238c/output/AndroidManifest.xml:7:5-9:41
+MERGED from [me.aflak.libraries:pulltorefresh:1.0] /Users/rob/.android/build-cache/59967b52c7b93d2edd6c544a35a3fb908cdd06c8/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/rob/.android/build-cache/6bfdbd174ec1500546cd090f096943367ce6133b/output/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/rob/.android/build-cache/a6bb373faa4c9372f75facee75d60c86fdd4e5ec/output/AndroidManifest.xml:5:5-43
@@ -58,6 +60,8 @@ MERGED from [com.android.support:percent:23.4.0] /Users/rob/.android/build-cache
 MERGED from [com.android.support:cardview-v7:23.4.0] /Users/rob/.android/build-cache/8d4b56246a70539d1f1c5636e72c9c930d708a92/output/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:preference-v14:23.4.0] /Users/rob/.android/build-cache/8d685ad142cd008b86cfdcccdd44acf244ef5c75/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:preference-v7:23.4.0] /Users/rob/.android/build-cache/92ab80107b3ed42ae5e30762a445bbe13d7984d0/output/AndroidManifest.xml:9:5-20
+MERGED from [me.aflak.libraries:bluetooth:1.2.4] /Users/rob/.android/build-cache/94629d1ff5aea7f9d38ccfb0a63954249cc8238c/output/AndroidManifest.xml:14:5-18:19
+MERGED from [me.aflak.libraries:pulltorefresh:1.0] /Users/rob/.android/build-cache/59967b52c7b93d2edd6c544a35a3fb908cdd06c8/output/AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/rob/.android/build-cache/6bfdbd174ec1500546cd090f096943367ce6133b/output/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/rob/.android/build-cache/a6bb373faa4c9372f75facee75d60c86fdd4e5ec/output/AndroidManifest.xml:7:5-20
@@ -73,8 +77,8 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/rob/.android/build-ca
 	android:theme
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:39:9-47
 	android:name
-		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:34:9-39
-activity#eu.basicairdata.graziano.gpslogger.GPSActivity
+		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:34:9-70
+activity#eu.basicairdata.graziano.onfire.GPSActivity
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:40:9-48:20
 	android:label
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:41:13-45
@@ -83,7 +87,7 @@ ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:40:
 	android:exported
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:42:13-36
 	android:name
-		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:40:19-46
+		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:40:19-77
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:44:13-47:29
 action#android.intent.action.MAIN
@@ -94,7 +98,7 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:46:17-77
 	android:name
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:46:27-74
-activity#eu.basicairdata.graziano.gpslogger.SettingsActivity
+activity#eu.basicairdata.graziano.onfire.SettingsActivity
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:49:9-56:20
 	android:label
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:50:13-50
@@ -103,22 +107,30 @@ ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:49:
 	android:configChanges
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:52:13-59
 	android:name
-		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:49:19-51
+		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:49:19-82
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:53:13-55:48
+ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:53:13-55:79
 	android:value
-		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:55:17-45
+		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:55:17-76
 	android:name
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:54:17-63
-service#eu.basicairdata.graziano.gpslogger.GPSService
+service#eu.basicairdata.graziano.onfire.GPSService
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:57:9-63:19
 	android:exported
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:59:13-36
 	android:name
-		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:58:13-39
+		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:58:13-70
 intent-filter#eu.basicairdata.graziano.gpslogger.GPSService
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:60:13-62:29
 action#eu.basicairdata.graziano.gpslogger.GPSService
 ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:61:17-88
 	android:name
 		ADDED from /Users/rob/onfire/android/OnFire/app/src/main/AndroidManifest.xml:61:25-85
+uses-permission#android.permission.BLUETOOTH
+ADDED from [me.aflak.libraries:bluetooth:1.2.4] /Users/rob/.android/build-cache/94629d1ff5aea7f9d38ccfb0a63954249cc8238c/output/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from [me.aflak.libraries:bluetooth:1.2.4] /Users/rob/.android/build-cache/94629d1ff5aea7f9d38ccfb0a63954249cc8238c/output/AndroidManifest.xml:11:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [me.aflak.libraries:bluetooth:1.2.4] /Users/rob/.android/build-cache/94629d1ff5aea7f9d38ccfb0a63954249cc8238c/output/AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from [me.aflak.libraries:bluetooth:1.2.4] /Users/rob/.android/build-cache/94629d1ff5aea7f9d38ccfb0a63954249cc8238c/output/AndroidManifest.xml:12:22-71
