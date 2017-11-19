@@ -4,14 +4,6 @@
         "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/menu/card_menu.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/menu/card_menu.xml",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/menu/card_menu.xml"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/menu/main_menu.xml",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/menu/main_menu.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/menu/main_menu.xml",
         "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/menu/main_menu.xml"
     }

@@ -17,7 +17,7 @@
   ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.basicairdata.graziano.onfire"
+    package="sensai.onfire"
     android:versionCode="19"
     android:versionName="0.19" >
 
@@ -35,14 +35,14 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
-        android:name="eu.basicairdata.graziano.onfire.GPSApplication"
+        android:name="sensai.onfire.OnFireApplication"
         android:allowBackup="true"
         android:icon="@mipmap/gps_logger"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme" >
         <activity
-            android:name="eu.basicairdata.graziano.onfire.GPSActivity"
+            android:name="sensai.onfire.OnFireActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask" >
@@ -53,20 +53,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="eu.basicairdata.graziano.onfire.SettingsActivity"
+            android:name="sensai.onfire.SettingsActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/menu_settings"
             android:launchMode="singleTask" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="eu.basicairdata.graziano.onfire.GPSActivity" />
+                android:value="sensai.onfire.GPSActivity" />
         </activity>
 
         <service
-            android:name="eu.basicairdata.graziano.onfire.GPSService"
+            android:name="sensai.onfire.OnFireService"
             android:exported="true" >
             <intent-filter>
-                <action android:name="eu.basicairdata.graziano.gpslogger.GPSService" />
+                <action android:name="sensai.onfire.GPSService" />
             </intent-filter>
         </service>
     </application>

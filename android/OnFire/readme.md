@@ -1,3 +1,3 @@
 ## Description
 
-OnFire is a simple App to record your position.
+OnFire is an app to assist wildfire fighters.

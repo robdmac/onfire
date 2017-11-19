@@ -24,7 +24,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/id_coordinatorlayout"
-    tools:context="eu.basicairdata.graziano.onfire.GPSActivity">
+    tools:context="eu.basicairdata.sensai.onfire.GPSActivity">
 
 <android.support.design.widget.AppBarLayout
     android:id="@+id/id_appbarlayout"

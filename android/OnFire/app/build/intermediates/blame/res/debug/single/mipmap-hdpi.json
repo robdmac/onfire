@@ -1,71 +1,11 @@
 [
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_flight_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_flight_white_24dp.png"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_place_white_24dp.png",
         "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_place_white_24dp.png"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_run_white_24dp.png",
         "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_directions_run_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_add_white_24dp.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_add_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_place_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_place_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_flight_white_24dp.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_flight_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_terrain_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_terrain_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_car_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_directions_car_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_gps_logger_notification.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_gps_logger_notification.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/gps_logger.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/gps_logger.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_terrain_white_24dp.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_terrain_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_done_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_done_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_car_white_24dp.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_directions_car_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_run_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_directions_run_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_bike_white_24dp.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_directions_bike_white_24dp.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_gps_logger_notification.png",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_gps_logger_notification.png"
-    },
-    {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_bike_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_directions_bike_white_24dp.png"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_done_white_24dp.png",
@@ -76,27 +16,35 @@
         "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_directions_walk_white_24dp.png"
     },
     {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_add_white_24dp.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_add_white_24dp.png"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_flight_white_24dp.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_flight_white_24dp.png"
+    },
+    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_add_location_white_24dp.png",
         "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_add_location_white_24dp.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_notify_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_notify_24dp.png"
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/gps_logger.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/gps_logger.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_add_location_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_add_location_white_24dp.png"
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_terrain_white_24dp.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_terrain_white_24dp.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_add_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_add_white_24dp.png"
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_car_white_24dp.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_directions_car_white_24dp.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_walk_white_24dp.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/ic_directions_walk_white_24dp.png"
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_directions_bike_white_24dp.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_directions_bike_white_24dp.png"
     },
     {
-        "merged": "/Users/rob/onfire/android/GPSLogger/app/build/intermediates/res/merged/debug/mipmap-hdpi/gps_logger.png",
-        "source": "/Users/rob/onfire/android/GPSLogger/app/src/main/res/mipmap-hdpi/gps_logger.png"
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_gps_logger_notification.png",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/mipmap-hdpi/ic_gps_logger_notification.png"
     }
 ]

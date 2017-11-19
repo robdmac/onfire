@@ -19,7 +19,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.basicairdata.graziano.onfire">
+    package="sensai.onfire">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -31,13 +31,13 @@
         tools:overrideLibrary="android.support.v14.preference" />
 
     <application
-        android:name="eu.basicairdata.graziano.onfire.GPSApplication"
+        android:name="sensai.onfire.OnFireApplication"
         android:allowBackup="true"
         android:icon="@mipmap/gps_logger"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
-        <activity android:name="eu.basicairdata.graziano.onfire.GPSActivity"
+        <activity android:name="sensai.onfire.OnFireActivity"
             android:label="@string/app_name"
             android:exported="true"
             android:launchMode="singleTask">
@@ -46,19 +46,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="eu.basicairdata.graziano.onfire.SettingsActivity"
+        <activity android:name="sensai.onfire.SettingsActivity"
             android:label="@string/menu_settings"
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="eu.basicairdata.graziano.onfire.GPSActivity" />
+                android:value="sensai.onfire.GPSActivity" />
         </activity>
         <service
-            android:name="eu.basicairdata.graziano.onfire.GPSService"
+            android:name="sensai.onfire.OnFireService"
             android:exported="true">
             <intent-filter>
-                <action android:name="eu.basicairdata.graziano.gpslogger.GPSService" />
+                <action android:name="sensai.onfire.GPSService" />
             </intent-filter>
         </service>
     </application>
