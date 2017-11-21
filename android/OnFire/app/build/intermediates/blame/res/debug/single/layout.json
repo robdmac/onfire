@@ -44,6 +44,10 @@
         "source": "/Users/rob/.android/build-cache/5548afc1c10b29aae27429ba7fc14e682a084725/output/res/layout/design_layout_tab_text.xml"
     },
     {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/scan.xml",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/layout/scan.xml"
+    },
+    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_list_menu_item_radio.xml"
     },
@@ -70,6 +74,10 @@
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/select.xml",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/layout/select.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
@@ -176,10 +184,6 @@
         "source": "/Users/rob/.android/build-cache/f6bfb732c3ef87e38b13837ed5abbe43dd422bb9/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/activity_gps.xml",
-        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/layout/activity_gps.xml"
-    },
-    {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference_widget_checkbox.xml",
         "source": "/Users/rob/.android/build-cache/92ab80107b3ed42ae5e30762a445bbe13d7984d0/output/res/layout/preference_widget_checkbox.xml"
     },
@@ -230,6 +234,10 @@
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/preference_dialog_edittext.xml",
         "source": "/Users/rob/.android/build-cache/92ab80107b3ed42ae5e30762a445bbe13d7984d0/output/res/layout/preference_dialog_edittext.xml"
+    },
+    {
+        "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/activity_onfire.xml",
+        "source": "/Users/rob/onfire/android/OnFire/app/src/main/res/layout/activity_onfire.xml"
     },
     {
         "merged": "/Users/rob/onfire/android/OnFire/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",

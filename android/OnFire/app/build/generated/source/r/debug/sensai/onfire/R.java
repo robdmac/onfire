@@ -2827,7 +2827,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int action0=0x7f0e00c9;
-        public static final int action_about=0x7f0e00e0;
+        public static final int action_about=0x7f0e00e6;
         public static final int action_bar=0x7f0e005a;
         public static final int action_bar_activity_content=0x7f0e0000;
         public static final int action_bar_container=0x7f0e0059;
@@ -2842,9 +2842,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int action_mode_bar=0x7f0e0057;
         public static final int action_mode_bar_stub=0x7f0e0056;
         public static final int action_mode_close_button=0x7f0e003c;
-        public static final int action_settings=0x7f0e00df;
-        public static final int action_shutdown=0x7f0e00e1;
-        public static final int action_track_finished=0x7f0e00e2;
+        public static final int action_settings=0x7f0e00e5;
+        public static final int action_shutdown=0x7f0e00e7;
+        public static final int action_track_finished=0x7f0e00e8;
         public static final int activity_chooser_view_content=0x7f0e003d;
         public static final int alertTitle=0x7f0e0049;
         public static final int always=0x7f0e0033;
@@ -2853,10 +2853,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int buttonPanel=0x7f0e0044;
         public static final int cancel_action=0x7f0e00ca;
         public static final int card_view=0x7f0e0071;
-        public static final int cardmenu_delete=0x7f0e00dd;
-        public static final int cardmenu_export=0x7f0e00dc;
-        public static final int cardmenu_share=0x7f0e00da;
-        public static final int cardmenu_view=0x7f0e00db;
+        public static final int cardmenu_delete=0x7f0e00e3;
+        public static final int cardmenu_export=0x7f0e00e2;
+        public static final int cardmenu_share=0x7f0e00e0;
+        public static final int cardmenu_view=0x7f0e00e1;
         public static final int center=0x7f0e001e;
         public static final int center_horizontal=0x7f0e001f;
         public static final int center_vertical=0x7f0e0020;
@@ -2919,7 +2919,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int id_fragmentrecordingcontrols=0x7f0e00c1;
         public static final int id_imageView_card_minimap=0x7f0e0072;
         public static final int id_imageView_card_tracktype=0x7f0e0074;
-        public static final int id_main_menu=0x7f0e00de;
+        public static final int id_main_menu=0x7f0e00e4;
         public static final int id_preferences=0x7f0e0070;
         public static final int id_progressBar_card=0x7f0e0075;
         public static final int id_tablayout=0x7f0e006c;
@@ -2995,14 +2995,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int never=0x7f0e0036;
         public static final int none=0x7f0e0010;
         public static final int normal=0x7f0e000c;
+        public static final int not_in_list=0x7f0e00df;
         public static final int parallax=0x7f0e001b;
         public static final int parentPanel=0x7f0e0046;
         public static final int pin=0x7f0e001c;
         public static final int placemark_description=0x7f0e00c0;
         public static final int progress_circular=0x7f0e0006;
         public static final int progress_horizontal=0x7f0e0007;
+        public static final int pull_to_refresh=0x7f0e00de;
         public static final int radio=0x7f0e0054;
         public static final int right=0x7f0e0024;
+        public static final int scan_list=0x7f0e00dc;
+        public static final int scan_progress=0x7f0e00da;
+        public static final int scan_scan_again=0x7f0e00dd;
+        public static final int scan_state=0x7f0e00db;
         public static final int screen=0x7f0e0028;
         public static final int scroll=0x7f0e0018;
         public static final int scrollIndicatorDown=0x7f0e004e;
@@ -3089,7 +3095,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int abc_search_dropdown_item_icons_2line=0x7f040016;
         public static final int abc_search_view=0x7f040017;
         public static final int abc_select_dialog_material=0x7f040018;
-        public static final int activity_gps=0x7f040019;
+        public static final int activity_onfire=0x7f040019;
         public static final int activity_settings=0x7f04001a;
         public static final int card_currenttrackinfo=0x7f04001b;
         public static final int card_trackinfo=0x7f04001c;
@@ -3129,10 +3135,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int preference_widget_checkbox=0x7f04003e;
         public static final int preference_widget_switch=0x7f04003f;
         public static final int preference_widget_switch_compat=0x7f040040;
-        public static final int select_dialog_item_material=0x7f040041;
-        public static final int select_dialog_multichoice_material=0x7f040042;
-        public static final int select_dialog_singlechoice_material=0x7f040043;
-        public static final int support_simple_spinner_dropdown_item=0x7f040044;
+        public static final int scan=0x7f040041;
+        public static final int select=0x7f040042;
+        public static final int select_dialog_item_material=0x7f040043;
+        public static final int select_dialog_multichoice_material=0x7f040044;
+        public static final int select_dialog_singlechoice_material=0x7f040045;
+        public static final int support_simple_spinner_dropdown_item=0x7f040046;
     }
     public static final class menu {
         public static final int card_menu=0x7f0f0000;

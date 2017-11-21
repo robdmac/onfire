@@ -133,7 +133,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f03484ef283631c7a7528aad5a2bee6a617e4a41">
+        sha1="a29c11619ef5701ae0ef82615ee8fb26c433eca8">
         <dex dex="/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_78119eb132b0ea6ee168f6210cf9b7efd3661b06/classes.dex" />
     </item>
     <item
