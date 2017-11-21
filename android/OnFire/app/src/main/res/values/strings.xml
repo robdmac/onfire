@@ -32,7 +32,7 @@
     <string name="altitude">Altitude</string>
     <string name="speed">Speed</string>
     <string name="direction">Direction</string>
-    <string name="accuracy">Accuracy</string>
+    <string name="accuracy">Distance</string>
     <string name="heartrate">Heart Rate</string>
     <string name="carbonmonoxide">Carbon Monoxide</string>
     <string name="pm2_5">PM 2.5</string>

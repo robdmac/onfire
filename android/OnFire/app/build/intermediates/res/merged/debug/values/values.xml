@@ -422,7 +422,7 @@
     <string name="about_rate_this_app">Rate this App</string>
     <string name="about_unable_to_rate">Unable to reach the Google Store</string>
     <string name="about_version">ver.</string>
-    <string name="accuracy">Accuracy</string>
+    <string name="accuracy">Distance</string>
     <string name="altitude">Altitude</string>
     <string name="altitude_gap">Altitude Gap</string>
     <string name="app_name">OnFire</string>

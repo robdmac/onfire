@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="TextAppearanceLargeNumbersSize">18sp</dimen>
-    <dimen name="TextAppearanceTextUMSize">12sp</dimen>
-    <dimen name="thumbSize">80dp</dimen>
-</resources>

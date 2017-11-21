@@ -1,4 +1,4 @@
-#Sun Nov 19 12:56:39 PST 2017
+#Mon Nov 20 22:10:26 PST 2017
 file.2=/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5a86568707d60b3df9a76a44f4e3f1c6db95db2a/classes.dex
 base.2=/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5a86568707d60b3df9a76a44f4e3f1c6db95db2a
 file.1=/Users/rob/onfire/android/OnFire/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_924328599be8b5e0185b14e0c524ee1917b2bcc6/classes.dex
