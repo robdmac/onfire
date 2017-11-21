@@ -19,9 +19,9 @@
   -->
 
 <resources>
-    <color name="colorPrimary">#880000</color>
-    <color name="colorPrimaryDark">#550000</color>
-    <color name="colorPrimaryLight">#b51111</color>
+    <color name="colorPrimary">#c24a00</color>
+    <color name="colorPrimaryDark">#313131</color>
+    <color name="colorPrimaryLight">#c24a00</color>
     <color name="textColorPrimary">#ffffff</color>
     <color name="textColorSecondary">#888888</color>
     <color name="colorBackground">#111111</color>

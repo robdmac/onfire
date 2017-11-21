@@ -34,16 +34,16 @@
     <string name="direction">Direction</string>
     <string name="accuracy">Distance</string>
     <string name="heartrate">Heart Rate</string>
+    <string name="safety">Overall Safety Rating</string>
     <string name="carbonmonoxide">Carbon Monoxide</string>
     <string name="pm2_5">PM 2.5</string>
     <string name="pm01">PM 0.1</string>
-
+    <string name="base">Base Direction</string>
 
     <string name="north">N</string>
     <string name="south">S</string>
     <string name="east">E</string>
     <string name="west">W</string>
-
 
     <!-- GPS Status messages -->
     <string name="gps_disabled">GPS disabled</string>

@@ -51,6 +51,8 @@ public class FragmentGPSFix extends Fragment {
     private TextView TVLongitudeUM;
     private TextView TVAltitude;
     private TextView TVAltitudeUM;
+    private TextView TVSafety;
+    private TextView TVDirection;
     private TextView TVHeartRate;
     private TextView TVCarbonMonoxide;
     private TextView TVPM2_5;
@@ -66,6 +68,8 @@ public class FragmentGPSFix extends Fragment {
     private TextView TVAccuracyUM;
     private TextView TVGPSFixStatus;
     //private TextView TVDirectionUM;
+    private TableLayout TLSafety;
+    private TableLayout TLDirection;
     private TableLayout TLHeartRate;
     private TableLayout TLCarbonMonoxide;
     private TableLayout TLPM2_5;
@@ -116,7 +120,9 @@ public class FragmentGPSFix extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gpsfix, container, false);
+        TVSafety = (TextView) view.findViewById(R.id.id_textView_Safety);
         TVHeartRate = (TextView) view.findViewById(R.id.id_textView_HeartRate);
+        TVDirection = (TextView) view.findViewById(R.id.id_textView_Base);
         TVCarbonMonoxide = (TextView) view.findViewById(R.id.id_textView_CarbonMonoxide);
         TVPM2_5 = (TextView) view.findViewById(R.id.id_textView_PM2_5);
         TVPM01 = (TextView) view.findViewById(R.id.id_textView_PM01);
@@ -124,6 +130,8 @@ public class FragmentGPSFix extends Fragment {
         TVCarbonMonoxideUM = (TextView) view.findViewById(R.id.id_textView_CarbonMonoxideUM);
         TVPM2_5UM = (TextView) view.findViewById(R.id.id_textView_PM2_5UM);
         TVPM01UM = (TextView) view.findViewById(R.id.id_textView_PM01UM);
+        TLSafety = (TableLayout) view.findViewById(R.id.id_TableLayout_Safety);
+        TLDirection = (TableLayout) view.findViewById(R.id.id_TableLayout_Base);
         TLHeartRate = (TableLayout) view.findViewById(R.id.id_TableLayout_HeartRate);
         TLCarbonMonoxide = (TableLayout) view.findViewById(R.id.id_TableLayout_CarbonMonoxide);
         TLPM2_5 = (TableLayout) view.findViewById(R.id.id_TableLayout_PM2_5);
@@ -215,6 +223,8 @@ public class FragmentGPSFix extends Fragment {
                 else if (currentPM01 <= 0) currentPM01 +=1;
                 else currentPM01 += rn4.nextInt(2) -1;
                 if (currentPM01 < 0) currentPM01 = 0;
+                currentCarbonMonoxide = 13;
+                currentPM2_5 = 4;
                 phdHeartRate = phdformatter.format(Integer.toString(currentHeartRate), "bpm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
                 phdCarbonMonoxide = phdformatter.format(Integer.toString(currentCarbonMonoxide), "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
                 phdPM01 = phdformatter.format(Integer.toString(currentPM01), "ppm");//phdformatter.format(location.getAltitudeCorrected(AltitudeManualCorrection, EGMAltitudeCorrection), PhysicalDataFormatter.FORMAT_ALTITUDE);
@@ -225,6 +235,7 @@ public class FragmentGPSFix extends Fragment {
                 TVLatitudeUM.setText(phdLatitude.UM);
                 TVLongitudeUM.setText(phdLongitude.UM);
                 TVHeartRate.setText(phdHeartRate.Value);
+                TVSafety.setText("Safe");
                 TVCarbonMonoxide.setText(phdCarbonMonoxide.Value);
                 TVPM01.setText(phdPM01.Value);
                 TVPM2_5.setText(phdPM2_5.Value);
@@ -240,12 +251,10 @@ public class FragmentGPSFix extends Fragment {
                 TVAccuracy.setText(phdAccuracy.Value);
                 TVAccuracyUM.setText(phdAccuracy.UM);
 
-
                 // Colorize the Altitude textview depending on the altitude EGM Correction
                 isValidAltitude = EGMAltitudeCorrection && (location.getAltitudeEGM96Correction() != NOT_AVAILABLE);
-                TVAltitude.setTextColor(isValidAltitude ? getResources().getColor(R.color.textColorPrimary) : getResources().getColor(R.color.textColorSecondary));
-                TVAltitudeUM.setTextColor(isValidAltitude ? getResources().getColor(R.color.textColorPrimary) : getResources().getColor(R.color.textColorSecondary));
-
+                //TVAltitude.setTextColor(isValidAltitude ? getResources().getColor(R.color.textColorPrimary) : getResources().getColor(R.color.textColorSecondary));
+                //TVAltitudeUM.setTextColor(isValidAltitude ? getResources().getColor(R.color.textColorPrimary) : getResources().getColor(R.color.textColorSecondary));
 
                 TVGPSFixStatus.setVisibility(View.GONE);
 
@@ -256,23 +265,24 @@ public class FragmentGPSFix extends Fragment {
                 //TLSpeed.setVisibility(phdSpeed.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
                 //TLBearing.setVisibility(phdBearing.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
                 TLAccuracy.setVisibility(phdAccuracy.Value.equals("") ? View.INVISIBLE : View.VISIBLE);
-
+                TLSafety.setVisibility(View.VISIBLE);
                 TLHeartRate.setVisibility(phdHeartRate.Value.equals("") ? View.VISIBLE : View.VISIBLE);
                 TLCarbonMonoxide.setVisibility(phdCarbonMonoxide.Value.equals("") ? View.VISIBLE : View.VISIBLE);
                 TLPM01.setVisibility(phdPM01.Value.equals("") ? View.VISIBLE : View.VISIBLE);
                 TLPM2_5.setVisibility(phdPM2_5.Value.equals("") ? View.VISIBLE : View.VISIBLE);
-
+                TLDirection.setVisibility(View.VISIBLE);
             } else {
                 TLCoordinates.setVisibility(View.INVISIBLE);
                 TLAltitude.setVisibility(View.INVISIBLE);
                 //TLSpeed.setVisibility(View.INVISIBLE);
                 //TLBearing.setVisibility(View.INVISIBLE);
                 TLAccuracy.setVisibility(View.INVISIBLE);
-
+                TLSafety.setVisibility(View.INVISIBLE);
                 TLHeartRate.setVisibility(View.INVISIBLE);
                 TLCarbonMonoxide.setVisibility(View.INVISIBLE);
                 TLPM01.setVisibility(View.INVISIBLE);
                 TLPM2_5.setVisibility(View.INVISIBLE);
+                TLDirection.setVisibility(View.INVISIBLE);
 
                 TVGPSFixStatus.setVisibility(View.VISIBLE);
                 switch (GPSStatus) {

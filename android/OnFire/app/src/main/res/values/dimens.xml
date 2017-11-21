@@ -30,7 +30,8 @@
 
     <dimen name="thumbSize">90dp</dimen>
     <dimen name="thumbLineWidth">1.5dp</dimen>
-    <dimen name="TextAppearanceLargeNumbersSize">26sp</dimen>
-    <dimen name="TextAppearanceTextUMSize">14sp</dimen>
-    <dimen name="TextAppearanceSmallTextSize">11sp</dimen>
+    <dimen name="TextAppearanceLargeSafetySize">70sp</dimen>
+    <dimen name="TextAppearanceLargeNumbersSize">32sp</dimen>
+    <dimen name="TextAppearanceTextUMSize">18sp</dimen>
+    <dimen name="TextAppearanceSmallTextSize">14sp</dimen>
 </resources>
