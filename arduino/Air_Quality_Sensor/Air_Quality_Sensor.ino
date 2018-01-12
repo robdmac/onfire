@@ -69,7 +69,7 @@ void set_alarm(void)
 
 SoftwareSerial BTserial(4,5); // TX / RX
 SoftwareSerial PMserial(11,12); // TX / RX
-SoftwareSerial GPSserial(7,6); // RX / TX
+SoftwareSerial GPSserial(42,53); // TX / RX
 
 void setTimeAndDate(){
   // If we ever need to adjust the clocks time and date it is done with this:
