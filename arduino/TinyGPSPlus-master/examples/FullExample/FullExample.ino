@@ -14,12 +14,11 @@ static const uint32_t GPSBaud = 9600;
 TinyGPSPlus gps;
 
 // The serial connection to the GPS device
-SoftwareSerial ss(RXPin, TXPin);
 
 void setup()
 {
   Serial.begin(9600);
-  ss.begin(GPSBaud);
+  Serial2.begin(GPSBaud);
 
   Serial.println(F("FullExample.ino"));
   Serial.println(F("An extensive example of many interesting TinyGPS++ features"));
@@ -86,8 +85,8 @@ static void smartDelay(unsigned long ms)
   unsigned long start = millis();
   do 
   {
-    while (ss.available())
-      gps.encode(ss.read());
+    while (Serial2.available())
+      gps.encode(Serial2.read());
   } while (millis() - start < ms);
 }
 

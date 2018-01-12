@@ -1,4 +1,4 @@
-#include <TinyGPS.h>
+#include <TinyGPS++.h>
 
 #include <DS3234.h>
 
@@ -26,7 +26,7 @@ int PM10Value=0;         //define PM10 value of the air detector module
 const int CS = 10; //
 int AlarmPin = 2;
 
-TinyGPS gps;
+TinyGPSPlus gps;
 
 //Create objects
 SdFat sd;
@@ -69,7 +69,7 @@ void set_alarm(void)
 
 SoftwareSerial BTserial(4,5); // TX / RX
 SoftwareSerial PMserial(11,12); // TX / RX
-SoftwareSerial GPSserial(42,53); // TX / RX
+//SoftwareSerial GPSserial(53,42); // TX / RX
 
 void setTimeAndDate(){
   // If we ever need to adjust the clocks time and date it is done with this:
@@ -83,19 +83,23 @@ void setup(){
   Serial.println("setup");
   BTserial.begin(9600);
   PMserial.begin(9600);
-  GPSserial.begin(9600);
   PMserial.setTimeout(1500);   
+  Serial.println("done setting up\n");
   //Serial.setTimeout(1000);    //set the Timeout to 1500ms, longer than the data transmission periodic time of the sensor
 
   Wire.begin();
+  Serial.println("done setting up\n");
   ads1.begin();
   ads2.begin();
+  Serial.println("done setting up\n");
 
   ads1.setGain(GAIN_TWO);    // 2x gain +/- 2.048V
   ads2.setGain(GAIN_TWO);
+  Serial.println("done setting up\n");
   
   SPI.beginTransaction(SPISettings(6000000, MSBFIRST, SPI_MODE3));
   rtc.begin();
+  Serial.println("done setting up\n");
   delay(1000);
   delay(1000);
   set_alarm();
@@ -116,6 +120,8 @@ void setup(){
 
   delay(1000); 
   Serial.println("done setting up\n");
+  Serial2.begin(9600);
+
 }
 #define BUFF_MAX 256
 
@@ -128,6 +134,51 @@ void printDigits(int digits){
 }
  
 void loop(){
+
+  static const double LONDON_LAT = 51.508131, LONDON_LON = -0.128002;
+
+  printInt(gps.satellites.value(), gps.satellites.isValid(), 5);
+  printInt(gps.hdop.value(), gps.hdop.isValid(), 5);
+  printFloat(gps.location.lat(), gps.location.isValid(), 11, 6);
+  printFloat(gps.location.lng(), gps.location.isValid(), 12, 6);
+  printInt(gps.location.age(), gps.location.isValid(), 5);
+  printDateTime(gps.date, gps.time);
+  printFloat(gps.altitude.meters(), gps.altitude.isValid(), 7, 2);
+  printFloat(gps.course.deg(), gps.course.isValid(), 7, 2);
+  printFloat(gps.speed.kmph(), gps.speed.isValid(), 6, 2);
+  printStr(gps.course.isValid() ? TinyGPSPlus::cardinal(gps.course.deg()) : "*** ", 6);
+
+  unsigned long distanceKmToLondon =
+    (unsigned long)TinyGPSPlus::distanceBetween(
+      gps.location.lat(),
+      gps.location.lng(),
+      LONDON_LAT, 
+      LONDON_LON) / 1000;
+  printInt(distanceKmToLondon, gps.location.isValid(), 9);
+
+  double courseToLondon =
+    TinyGPSPlus::courseTo(
+      gps.location.lat(),
+      gps.location.lng(),
+      LONDON_LAT, 
+      LONDON_LON);
+
+  printFloat(courseToLondon, gps.location.isValid(), 7, 2);
+
+  const char *cardinalToLondon = TinyGPSPlus::cardinal(courseToLondon);
+
+  printStr(gps.location.isValid() ? cardinalToLondon : "*** ", 6);
+
+  printInt(gps.charsProcessed(), true, 6);
+  printInt(gps.sentencesWithFix(), true, 10);
+  printInt(gps.failedChecksum(), true, 9);
+  Serial.println();
+  
+  smartDelay(3000);
+  //delay(10000);
+
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+    Serial.println(F("No GPS data received: check wiring"));
 
   delay (1000);
  
@@ -166,46 +217,6 @@ void loop(){
       PM10Value=transmitPM10(buf); //count PM10 value of the air detector module 
     }
   }
-
-  Serial.println("a");
-  if(GPSserial.available()) {
-      Serial.println("b");
-    int c = GPSserial.read();
-    if(gps.encode(c)) {
-        Serial.println("c");
-      float latitude, longitude;
-      gps.f_get_position(&latitude, &longitude);
-      Serial.print("Lat/Long: "); 
-      Serial.print(latitude,5); 
-      Serial.print(", "); 
-      Serial.println(longitude,5);
-      int year;
-      byte month, day, hour, minute, second, hundredths;
-      gps.crack_datetime(&year, &month, &day, &hour, &minute, &second, &hundredths);
-      // Print data and time
-      Serial.print("Date: "); Serial.print(month, DEC); Serial.print("/"); 
-      Serial.print(day, DEC); Serial.print("/"); Serial.print(year);
-      Serial.print("  Time: "); Serial.print(hour, DEC); Serial.print(":"); 
-      Serial.print(minute, DEC); Serial.print(":"); Serial.print(second, DEC); 
-      Serial.print("."); Serial.println(hundredths, DEC);
-      // Here you can print the altitude and course values directly since 
-      // there is only one value for the function
-      Serial.print("Altitude (meters): "); Serial.println(gps.f_altitude());  
-      // Same goes for course
-      Serial.print("Course (degrees): "); Serial.println(gps.f_course()); 
-      // And same goes for speed
-      Serial.print("Speed(kmph): "); Serial.println(gps.f_speed_kmph());
-      Serial.println();
-      // Here you can print statistics on the sentences.
-      unsigned long chars;
-      unsigned short sentences, failed_checksum;
-      gps.stats(&chars, &sentences, &failed_checksum);
-      //Serial.print("Failed Checksums: ");Serial.print(failed_checksum);
-      //Serial.println(); Serial.println();
-    }
-  }
-
-  delay(1000);
 
     String dataString = "";  //SD Card Storage Write//
         dataString += rtc.getDateStr();
@@ -286,6 +297,16 @@ void loop(){
     
 }
 
+static void smartDelay(unsigned long ms)
+{
+  unsigned long start = millis();
+  do 
+  {
+    while (Serial2.available())
+      gps.encode(Serial2.read());
+  } while (millis() - start < ms);
+}
+
 char checkValue(unsigned char *thebuf, char leng)
 {  
   char receiveflag=0;
@@ -349,3 +370,72 @@ int transmitPM10(unsigned char *thebuf)
   return PM10Val;
 }
 
+static void printDateTime(TinyGPSDate &d, TinyGPSTime &t)
+{
+  if (!d.isValid())
+  {
+    Serial.print(F("********** "));
+  }
+  else
+  {
+    char sz[32];
+    sprintf(sz, "%02d/%02d/%02d ", d.month(), d.day(), d.year());
+    Serial.print(sz);
+  }
+  
+  if (!t.isValid())
+  {
+    Serial.print(F("******** "));
+  }
+  else
+  {
+    char sz[32];
+    sprintf(sz, "%02d:%02d:%02d ", t.hour(), t.minute(), t.second());
+    Serial.print(sz);
+  }
+
+  printInt(d.age(), d.isValid(), 5);
+  smartDelay(0);
+}
+
+static void printFloat(float val, bool valid, int len, int prec)
+{
+  if (!valid)
+  {
+    while (len-- > 1)
+      Serial.print('*');
+    Serial.print(' ');
+  }
+  else
+  {
+    Serial.print(val, prec);
+    int vi = abs((int)val);
+    int flen = prec + (val < 0.0 ? 2 : 1); // . and -
+    flen += vi >= 1000 ? 4 : vi >= 100 ? 3 : vi >= 10 ? 2 : 1;
+    for (int i=flen; i<len; ++i)
+      Serial.print(' ');
+  }
+  smartDelay(0);
+}
+
+static void printInt(unsigned long val, bool valid, int len)
+{
+  char sz[32] = "*****************";
+  if (valid)
+    sprintf(sz, "%ld", val);
+  sz[len] = 0;
+  for (int i=strlen(sz); i<len; ++i)
+    sz[i] = ' ';
+  if (len > 0) 
+    sz[len-1] = ' ';
+  Serial.print(sz);
+  smartDelay(0);
+}
+
+static void printStr(const char *str, int len)
+{
+  int slen = strlen(str);
+  for (int i=0; i<len; ++i)
+    Serial.print(i<slen ? str[i] : ' ');
+  smartDelay(0);
+}
