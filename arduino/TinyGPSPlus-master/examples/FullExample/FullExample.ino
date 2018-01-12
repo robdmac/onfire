@@ -6,18 +6,20 @@
    4800-baud serial GPS device hooked up on pins 4(rx) and 3(tx).
 */
 static const int RXPin = 53, TXPin = 42;
+//static const int RXPin = 12, TXPin = 13;
+
 static const uint32_t GPSBaud = 9600;
 
 // The TinyGPS++ object
 TinyGPSPlus gps;
 
 // The serial connection to the GPS device
-SoftwareSerial ss(TXPin, RXPin);
+SoftwareSerial ss(RXPin, TXPin);
 
 void setup()
 {
-  Serial.begin(9600);
-  ss.begin(9600);
+  Serial.begin(115200);
+  ss.begin(GPSBaud);
 
   Serial.println(F("FullExample.ino"));
   Serial.println(F("An extensive example of many interesting TinyGPS++ features"));
@@ -70,12 +72,11 @@ void loop()
   printInt(gps.failedChecksum(), true, 9);
   Serial.println();
   
-  smartDelay(2000);
+  smartDelay(3000);
+  //delay(10000);
 
-  delay(4000);
-
-  //if (millis() > 5000 && gps.charsProcessed() < 10)
-  //  Serial.println(F("No GPS data received: check wiring"));
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+    Serial.println(F("No GPS data received: check wiring"));
 }
 
 // This custom version of delay() ensures that the gps object
@@ -85,11 +86,8 @@ static void smartDelay(unsigned long ms)
   unsigned long start = millis();
   do 
   {
-    while (ss.available()) {
-      char c = ss.read();
-      Serial.write(c);
-      gps.encode(c);
-    }
+    while (ss.available())
+      gps.encode(ss.read());
   } while (millis() - start < ms);
 }
 
