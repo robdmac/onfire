@@ -2,6 +2,8 @@
 
 #include <DS3234.h>
 
+#include <IridiumSBD.h>
+
 #include <Time.h>
 #include <TimeLib.h>
 #include <config.h>
@@ -26,7 +28,10 @@ int PM10Value=0;         //define PM10 value of the air detector module
 const int CS = 10; //
 int AlarmPin = 2;
 
+static const int ledPin = 13;
+
 TinyGPSPlus gps;
+IridiumSBD isbd(Serial1);
 
 //Create objects
 SdFat sd;
@@ -78,8 +83,43 @@ void setTimeAndDate(){
   // rtc.setDate(07, 1, 2018);    // Set the date to January 25th, 
 }
 
+bool ISBDCallback()
+{
+   digitalWrite(ledPin, (millis() / 1000) % 2 == 1 ? HIGH : LOW);
+   return true;
+}
+
 void setup(){
   Serial.begin(9600); 
+  int signalQuality = -1;
+  pinMode(ledPin, OUTPUT);
+  Serial1.begin(19200);
+  isbd.attachConsole(Serial);
+  isbd.setPowerProfile(1);
+  isbd.begin();
+  int err = isbd.getSignalQuality(signalQuality);
+  if (err != 0)
+  {
+    Serial.print("SignalQuality failed: error ");
+    Serial.println(err);
+    return;
+  }
+
+  Serial.print("Signal quality is ");
+  Serial.println(signalQuality);
+
+  err = isbd.sendSBDText("Hello, world!");
+  if (err != 0)
+  {
+    Serial.print("sendSBDText failed: error ");
+    Serial.println(err);
+    return;
+  }
+
+  Serial.println("Hey, it worked!");
+  Serial.print("Messages left: ");
+  Serial.println(isbd.getWaitingMessageCount());
+  
   Serial.println("setup");
   BTserial.begin(9600);
   PMserial.begin(9600);
@@ -134,6 +174,7 @@ void printDigits(int digits){
 }
  
 void loop(){
+  digitalWrite(ledPin, HIGH);
 
   static const double LONDON_LAT = 51.508131, LONDON_LON = -0.128002;
 
